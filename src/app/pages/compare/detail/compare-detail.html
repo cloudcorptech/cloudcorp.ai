@@ -1,0 +1,59 @@
+@if (competitor(); as c) {
+  <section class="section">
+    <div class="container">
+      <a routerLink="/compare" class="back-link">&larr; All comparisons</a>
+      <h1>{{ c.tagline }}</h1>
+      <p class="page-subtitle">{{ c.description }}</p>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>CloudVoice</th>
+              <th>{{ c.name }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (f of c.features; track f.name) {
+              <tr>
+                <td class="feature-name">{{ f.name }}</td>
+                <td>{{ f.cloudvoice }}</td>
+                <td>{{ f.competitor }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pricing-section">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>CloudVoice</h3>
+            <p>{{ c.pricing.cloudvoice }}</p>
+          </div>
+          <div class="pricing-card">
+            <h3>{{ c.name }}</h3>
+            <p>{{ c.pricing.competitor }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="advantages-section">
+        <h2>Why CloudVoice for South African businesses</h2>
+        <ul class="advantages-list">
+          @for (a of c.advantages; track a) {
+            <li>{{ a }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="cta-block">
+        <h2>See CloudVoice in action</h2>
+        <p>Get in touch and we will set up a demo tailored to your business.</p>
+        <a href="mailto:hello@cloudcorp.ai" class="btn btn-primary">Contact us</a>
+      </div>
+    </div>
+  </section>
+}

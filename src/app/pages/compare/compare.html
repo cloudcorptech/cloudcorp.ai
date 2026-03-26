@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <h1>Compare CloudVoice</h1>
+    <p class="page-subtitle">
+      See how CloudVoice stacks up against other voice AI platforms.
+      Built for South African businesses with local support and Rand pricing.
+    </p>
+
+    <div class="compare-grid">
+      @for (c of competitors; track c.slug) {
+        <a [routerLink]="['/compare', c.slug]" class="compare-card">
+          <h3>{{ c.tagline }}</h3>
+          <p>{{ c.description }}</p>
+          <span class="card-link">View comparison</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>

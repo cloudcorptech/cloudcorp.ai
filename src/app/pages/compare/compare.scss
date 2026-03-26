@@ -1,0 +1,46 @@
+.page-subtitle {
+  font-size: 1.125rem;
+  max-width: 520px;
+  margin-top: var(--space-md);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.compare-card {
+  display: block;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--color-text);
+  }
+
+  h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  p {
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-md);
+  }
+}
+
+.card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,58 @@
+<header class="header">
+  <div class="container header-inner">
+    <a routerLink="/" class="logo" (click)="closeMenu()">CloudCorp</a>
+
+    <nav class="nav" [class.nav-open]="mobileMenuOpen()">
+      <a routerLink="/compare" routerLinkActive="active" (click)="closeMenu()">Compare</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <a href="https://voice.cloudcorp.ai" class="btn btn-primary header-cta">Get Started</a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="mobileMenuOpen()" aria-label="Toggle menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-brand">CloudCorp</span>
+        <p class="footer-desc">AI voice agents and WhatsApp automation for South African businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="https://voice.cloudcorp.ai">CloudVoice</a>
+        <a routerLink="/compare">Compare</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Compare</h4>
+        <a routerLink="/compare/retell-ai">vs Retell AI</a>
+        <a routerLink="/compare/vapi">vs Vapi</a>
+        <a routerLink="/compare/synthflow">vs Synthflow</a>
+        <a routerLink="/compare/bland-ai">vs Bland AI</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@cloudcorp.ai">hello&#64;cloudcorp.ai</a>
+        <a href="tel:+27715007671">+27 71 500 7671</a>
+        <span class="text-muted">Johannesburg, South Africa</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; {{ currentYear }} CloudCorp (Pty) Ltd. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
