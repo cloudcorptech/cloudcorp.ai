@@ -26,7 +26,7 @@ jobs:
         run: npx ng build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@da0e0235b5fc0e81a889d3cbb96e2fc2e6dc26b5 # v3
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
