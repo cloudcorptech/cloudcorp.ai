@@ -38,11 +38,11 @@ import { SeoService } from '../../services/seo.service';
               </div>
               <div>
                 <span class="label">Phone</span>
-                <a href="tel:+27715007671">+27 71 500 7671</a>
+                <a href="tel:+27118815600">+27 11 881 5600</a>
               </div>
               <div>
                 <span class="label">Location</span>
-                <span>Johannesburg, South Africa</span>
+                <span>Nelson Mandela Square, Sandton, Johannesburg</span>
               </div>
             </div>
           </div>

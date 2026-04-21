@@ -19,11 +19,19 @@ import { SeoService } from '../../services/seo.service';
           </div>
           <div class="contact-item">
             <span class="label">Phone</span>
-            <a href="tel:+27715007671">+27 71 500 7671</a>
+            <a href="tel:+27118815600">+27 11 881 5600</a>
+          </div>
+          <div class="contact-item contact-item--wide">
+            <span class="label">Office</span>
+            <span class="office-address">
+              West Tower, 2nd Floor<br>
+              Nelson Mandela Square, Maude Street<br>
+              Sandown, Johannesburg, 2146
+            </span>
           </div>
           <div class="contact-item">
-            <span class="label">Location</span>
-            <span>Johannesburg, South Africa</span>
+            <span class="label">Reception hours</span>
+            <span>Monday – Friday, 08:00 – 17:30</span>
           </div>
           <div class="contact-item">
             <span class="label">CloudVoice Platform</span>
@@ -45,7 +53,17 @@ import { SeoService } from '../../services/seo.service';
       grid-template-columns: 1fr 1fr;
       gap: var(--space-xl);
       margin-top: var(--space-2xl);
-      max-width: 560px;
+      max-width: 640px;
+    }
+
+    .contact-item--wide {
+      grid-column: 1 / -1;
+    }
+
+    .office-address {
+      font-size: 1.0625rem;
+      color: var(--color-text);
+      line-height: 1.6;
     }
 
     .contact-item {
@@ -88,7 +106,7 @@ export class Contact implements OnInit {
   ngOnInit(): void {
     this.seo.update({
       title: 'Contact',
-      description: 'Get in touch with CloudCorp. Email hello@cloudcorp.ai or call +27 71 500 7671. Based in Johannesburg, South Africa.',
+      description: 'Get in touch with CloudCorp. Email hello@cloudcorp.ai or call +27 11 881 5600. Based at Nelson Mandela Square, Sandton, Johannesburg.',
       url: '/contact',
     });
   }
